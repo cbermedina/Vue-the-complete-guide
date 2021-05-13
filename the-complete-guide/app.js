@@ -4,6 +4,9 @@ const app = Vue.createApp({
       counter: 0,
       name: "",
       fullname: "",
+      boxASelected: false,
+      boxBSelected: false,
+      boxCSelected: false,
     };
   },
   watch: {
@@ -12,13 +15,6 @@ const app = Vue.createApp({
         this.counter = 0;
       }
     },
-    // name(value) {
-    //   if (value == "") this.fullname = "";
-    //   else {
-    //     this.fullname = value + "  Cesar Bermudez";
-    //   }
-    // },
-    // lastName()
   },
   computed: {
     fullname() {
@@ -29,6 +25,12 @@ const app = Vue.createApp({
     },
   },
   methods: {
+    boxSelected(box) {
+      alert(box);
+      if (box === "A") this.boxASelected = !this.boxASelected;
+      else if (box === "B") this.boxBSelected = !this.boxBSelected;
+      else if (box === "C") this.boxCSelected = !this.boxCSelected;
+    },
     resetInput() {
       this.name = "";
     },

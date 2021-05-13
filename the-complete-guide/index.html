@@ -14,10 +14,10 @@
   </head>
   <body>
     <header>
-      <h1>Vue Events</h1>
+      <h1>Vue Events(Events in Action(basics-03-events-starting-code))</h1>
     </header>
     <section id="events">
-      <h2>Events in Action</h2>
+      <h2>Events in Action()</h2>
       <button v-on:click="add(5)">Add 5</button>
       <button v-on:click="reduce(5)">Subtrac 5</button>
       <p>Result: {{ counter }}</p>
@@ -32,6 +32,17 @@
         <input type="text" />
         <button>Sign Up</button>
       </form>
+    </section>
+
+    <header>
+      <h1>Vue Dynamic Style</h1>
+    </header>
+    <section id="styling">
+      <div class="demo" 
+      :style="{borderColor: boxASelected? 'red':'#ccc'}" 
+      @click="boxSelected('A')"></div>
+      <div class="demo" @click="boxSelected('B')"></div>
+      <div class="demo" @click="boxSelected('C')"></div>
     </section>
   </body>
 </html>
